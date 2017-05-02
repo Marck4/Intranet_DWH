@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="IntranetMySQL"
+  DTS:DTSID="{923F09B3-005E-4051-8DC5-2EA121539118}"
+  DTS:CreationName="ODBC">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[$Project::IntranetMySQL_ConnectionString]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="uid=marcoc;Dsn=LocalhostIntranet;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
