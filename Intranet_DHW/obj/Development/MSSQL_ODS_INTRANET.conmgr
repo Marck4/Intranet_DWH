@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="MSSQL_ODS_INTRANET"
+  DTS:DTSID="{8F72934A-B606-44C4-B85C-12E073D7355C}"
+  DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[$Project::MSSQL_ODS_INTRANET_ConnectionString]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=EXTLENCBP227498\MSSQL_ODS;Initial Catalog=ODS_INTRANET;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
