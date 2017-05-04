@@ -11,8 +11,8 @@
   DTS:LocaleID="2058"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="344"
-  DTS:VersionGUID="{13B2A28C-6EB2-47AB-81D0-A137B391B263}">
+  DTS:VersionBuild="355"
+  DTS:VersionGUID="{DB0207B0-8224-43FA-A304-82BAD41C8CCB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -175,12 +175,6 @@
                           cachedDataType="dbTimeStamp2"
                           cachedName="modified_ole"
                           lineageId="Package\DataCollectionGayosso\DataMigration\Merge_data_collection_gayosso.Outputs[Merge Join Output].Columns[modified_ole]" />
-                        <inputColumn
-                          refId="Package\DataCollectionGayosso\DataMigration\Conditional_Split_data_collection_gayosso.Inputs[Conditional Split Input].Columns[collection_layout_entity_id_sort]"
-                          cachedDataType="ui4"
-                          cachedName="collection_layout_entity_id_sort"
-                          cachedSortKeyPosition="1"
-                          lineageId="Package\DataCollectionGayosso\DataMigration\Merge_data_collection_gayosso.Outputs[Merge Join Output].Columns[collection_layout_entity_id_sort]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -200,13 +194,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                          name="Expression">[ISNULL](#{Package\DataCollectionGayosso\DataMigration\Merge_data_collection_gayosso.Outputs[Merge Join Output].Columns[collection_layout_entity_id_ole]}) &amp;&amp; #{Package\DataCollectionGayosso\DataMigration\Merge_data_collection_gayosso.Outputs[Merge Join Output].Columns[collection_layout_entity_id_sort]} &gt;= @[User::LastID]</property>
+                          name="Expression">[ISNULL](#{Package\DataCollectionGayosso\DataMigration\Merge_data_collection_gayosso.Outputs[Merge Join Output].Columns[collection_layout_entity_id_ole]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Specifies the friendly version of the expression. This expression version uses column names."
                           expressionType="Notify"
-                          name="FriendlyExpression">ISNULL(collection_layout_entity_id_ole) &amp;&amp; collection_layout_entity_id_sort &gt;= @[User::LastID]</property>
+                          name="FriendlyExpression">ISNULL(collection_layout_entity_id_ole)</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -5477,12 +5471,6 @@
                           cachedDataType="ui4"
                           cachedName="collection_opinion_entity_id_MSSQL"
                           lineageId="Package\DataOpinionsGayosso\DataMigration_O\Merge_data_opinion_gayosso.Outputs[Merge Join Output].Columns[collection_opinion_entity_id_MSSQL]" />
-                        <inputColumn
-                          refId="Package\DataOpinionsGayosso\DataMigration_O\Conditional_Split_data_collection_gayosso.Inputs[Conditional Split Input].Columns[collection_opinion_entity_id_sort]"
-                          cachedDataType="ui4"
-                          cachedName="collection_opinion_entity_id_sort"
-                          cachedSortKeyPosition="1"
-                          lineageId="Package\DataOpinionsGayosso\DataMigration_O\Merge_data_opinion_gayosso.Outputs[Merge Join Output].Columns[collection_opinion_entity_id_sort]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -5502,13 +5490,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                          name="Expression">[ISNULL](#{Package\DataOpinionsGayosso\DataMigration_O\Merge_data_opinion_gayosso.Outputs[Merge Join Output].Columns[collection_opinion_entity_id_MSSQL]}) &amp;&amp; #{Package\DataOpinionsGayosso\DataMigration_O\Merge_data_opinion_gayosso.Outputs[Merge Join Output].Columns[collection_opinion_entity_id_sort]} &gt;= 0</property>
+                          name="Expression">[ISNULL](#{Package\DataOpinionsGayosso\DataMigration_O\Merge_data_opinion_gayosso.Outputs[Merge Join Output].Columns[collection_opinion_entity_id_MSSQL]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Specifies the friendly version of the expression. This expression version uses column names."
                           expressionType="Notify"
-                          name="FriendlyExpression">ISNULL(collection_opinion_entity_id_MSSQL) &amp;&amp; collection_opinion_entity_id_sort &gt;= 0</property>
+                          name="FriendlyExpression">ISNULL(collection_opinion_entity_id_MSSQL)</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -9547,26 +9535,20 @@
                       name="Conditional Split Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\Conditional_Split_data_payment_gayosso.Inputs[Conditional Split Input].Columns[collection_payment_id]"
-                          cachedDataType="ui4"
-                          cachedName="collection_payment_id"
-                          cachedSortKeyPosition="1"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[collection_payment_id]" />
-                        <inputColumn
                           refId="Package\DataPaymentsGayosso\DataMigration_P\Conditional_Split_data_payment_gayosso.Inputs[Conditional Split Input].Columns[mofified]"
                           cachedDataType="dbTimeStamp"
                           cachedName="mofified"
                           lineageId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[mofified]" />
                         <inputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\Conditional_Split_data_payment_gayosso.Inputs[Conditional Split Input].Columns[collection_payment_id (1)]"
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\Conditional_Split_data_payment_gayosso.Inputs[Conditional Split Input].Columns[collection_payment_id_MSSQL]"
                           cachedDataType="ui4"
-                          cachedName="collection_payment_id (1)"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[collection_payment_id (1)]" />
+                          cachedName="collection_payment_id_MSSQL"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[collection_payment_id_MSSQL]" />
                         <inputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\Conditional_Split_data_payment_gayosso.Inputs[Conditional Split Input].Columns[mofified (1)]"
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\Conditional_Split_data_payment_gayosso.Inputs[Conditional Split Input].Columns[mofified_MSSQL]"
                           cachedDataType="dbTimeStamp2"
-                          cachedName="mofified (1)"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[mofified (1)]" />
+                          cachedName="mofified_MSSQL"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[mofified_MSSQL]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -9586,13 +9568,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                          name="Expression">[ISNULL](#{Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[collection_payment_id (1)]}) &amp;&amp; #{Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[collection_payment_id]} &gt;= 0</property>
+                          name="Expression">[ISNULL](#{Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[collection_payment_id_MSSQL]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Specifies the friendly version of the expression. This expression version uses column names."
                           expressionType="Notify"
-                          name="FriendlyExpression">ISNULL([collection_payment_id (1)]) &amp;&amp; collection_payment_id &gt;= 0</property>
+                          name="FriendlyExpression">ISNULL(collection_payment_id_MSSQL)</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -9614,13 +9596,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                          name="Expression">[REPLACENULL](#{Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[mofified]},"1999-01-01 00:00:00") &gt; [REPLACENULL](#{Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[mofified (1)]},"1999-01-01 00:00:00")</property>
+                          name="Expression">[REPLACENULL](#{Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[mofified]},"1999-01-01 00:00:00") &gt; [REPLACENULL](#{Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[mofified_MSSQL]},"1999-01-01 00:00:00")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Specifies the friendly version of the expression. This expression version uses column names."
                           expressionType="Notify"
-                          name="FriendlyExpression">REPLACENULL(mofified,"1999-01-01 00:00:00") &gt; REPLACENULL([mofified (1)],"1999-01-01 00:00:00")</property>
+                          name="FriendlyExpression">REPLACENULL(mofified,"1999-01-01 00:00:00") &gt; REPLACENULL(mofified_MSSQL,"1999-01-01 00:00:00")</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -9949,16 +9931,16 @@
                       name="Merge Join Right Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Inputs[Merge Join Right Input].Columns[collection_payment_id]"
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Inputs[Merge Join Right Input].Columns[collection_payment_id_MSSQL]"
                           cachedDataType="ui4"
-                          cachedName="collection_payment_id"
+                          cachedName="collection_payment_id_MSSQL"
                           cachedSortKeyPosition="1"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[collection_payment_id]" />
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[collection_payment_id_MSSQL]" />
                         <inputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Inputs[Merge Join Right Input].Columns[mofified]"
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Inputs[Merge Join Right Input].Columns[mofified_MSSQL]"
                           cachedDataType="dbTimeStamp2"
-                          cachedName="mofified"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[mofified]" />
+                          cachedName="mofified_MSSQL"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[mofified_MSSQL]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -10078,274 +10060,31 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[collection_payment_id (1)]"
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[collection_payment_id_MSSQL]"
                           dataType="ui4"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[collection_payment_id (1)]"
-                          name="collection_payment_id (1)">
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[collection_payment_id_MSSQL]"
+                          name="collection_payment_id_MSSQL">
                           <properties>
                             <property
                               containsID="true"
                               dataType="System.Int32"
                               description="The input column associated with this output column"
-                              name="InputColumnID">#{Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Inputs[Merge Join Right Input].Columns[collection_payment_id]}</property>
+                              name="InputColumnID">#{Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Inputs[Merge Join Right Input].Columns[collection_payment_id_MSSQL]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[mofified (1)]"
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[mofified_MSSQL]"
                           dataType="dbTimeStamp2"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[mofified (1)]"
-                          name="mofified (1)">
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Outputs[Merge Join Output].Columns[mofified_MSSQL]"
+                          name="mofified_MSSQL">
                           <properties>
                             <property
                               containsID="true"
                               dataType="System.Int32"
                               description="The input column associated with this output column"
-                              name="InputColumnID">#{Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Inputs[Merge Join Right Input].Columns[mofified]}</property>
+                              name="InputColumnID">#{Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Inputs[Merge Join Right Input].Columns[mofified_MSSQL]}</property>
                           </properties>
                         </outputColumn>
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
-                  refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso"
-                  componentClassID="Microsoft.OLEDBSource"
-                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-                  description="OLE DB Source"
-                  name="MSSQL_data_payment_gayosso"
-                  usesDispositions="true"
-                  validateExternalMetadata="False"
-                  version="7">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                      name="CommandTimeout">0</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[intranet].[data_payment_gayosso]</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
-                    <property
-                      dataType="System.String"
-                      description="The SQL command to be executed."
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                    <property
-                      dataType="System.String"
-                      description="The variable that contains the SQL command to be executed."
-                      name="SqlCommandVariable"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the column code page to use when code page information is unavailable from the data source."
-                      name="DefaultCodePage">1252</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Forces the use of the DefaultCodePage property value when describing character data."
-                      name="AlwaysUseDefaultCodePage">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the mode used to access the database."
-                      name="AccessMode"
-                      typeConverter="AccessMode">0</property>
-                    <property
-                      dataType="System.String"
-                      description="The mappings between the parameters in the SQL command and variables."
-                      name="ParameterMapping"></property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Connections[OleDbConnection]"
-                      connectionManagerID="{8F72934A-B606-44C4-B85C-12E073D7355C}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[MSSQL_ODS_INTRANET]"
-                      description="The OLE DB runtime connection used to access the database."
-                      name="OleDbConnection" />
-                  </connections>
-                  <outputs>
-                    <output
-                      refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output]"
-                      isSorted="true"
-                      name="OLE DB Source Output">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[CONTRATO]"
-                          dataType="i8"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].ExternalColumns[CONTRATO]"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[CONTRATO]"
-                          name="CONTRATO"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[created]"
-                          dataType="dbTimeStamp2"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].ExternalColumns[created]"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[created]"
-                          name="created"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[collection_opinion_entity_id]"
-                          dataType="ui4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].ExternalColumns[collection_opinion_entity_id]"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[collection_opinion_entity_id]"
-                          name="collection_opinion_entity_id"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[collection_payment_id]"
-                          dataType="ui4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].ExternalColumns[collection_payment_id]"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[collection_payment_id]"
-                          name="collection_payment_id"
-                          sortKeyPosition="1"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[collection_layout_entity_id]"
-                          dataType="i8"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].ExternalColumns[collection_layout_entity_id]"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[collection_layout_entity_id]"
-                          name="collection_layout_entity_id"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[payment_date]"
-                          dataType="dbDate"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].ExternalColumns[payment_date]"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[payment_date]"
-                          name="payment_date"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[Payment]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].ExternalColumns[Payment]"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[Payment]"
-                          name="Payment"
-                          precision="33"
-                          scale="2"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[mofified]"
-                          dataType="dbTimeStamp2"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].ExternalColumns[mofified]"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].Columns[mofified]"
-                          name="mofified"
-                          truncationRowDisposition="FailComponent" />
-                      </outputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].ExternalColumns[CONTRATO]"
-                          dataType="i8"
-                          name="CONTRATO" />
-                        <externalMetadataColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].ExternalColumns[created]"
-                          dataType="dbTimeStamp2"
-                          name="created" />
-                        <externalMetadataColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].ExternalColumns[collection_opinion_entity_id]"
-                          dataType="wstr"
-                          length="15"
-                          name="collection_opinion_entity_id" />
-                        <externalMetadataColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].ExternalColumns[collection_payment_id]"
-                          dataType="i8"
-                          name="collection_payment_id" />
-                        <externalMetadataColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].ExternalColumns[collection_layout_entity_id]"
-                          dataType="i8"
-                          name="collection_layout_entity_id" />
-                        <externalMetadataColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].ExternalColumns[payment_date]"
-                          dataType="dbDate"
-                          name="payment_date" />
-                        <externalMetadataColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].ExternalColumns[Payment]"
-                          dataType="numeric"
-                          name="Payment"
-                          precision="33"
-                          scale="2" />
-                        <externalMetadataColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output].ExternalColumns[mofified]"
-                          dataType="dbTimeStamp2"
-                          name="mofified" />
-                      </externalMetadataColumns>
-                    </output>
-                    <output
-                      refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output]"
-                      isErrorOut="true"
-                      name="OLE DB Source Error Output">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[collection_payment_id]"
-                          dataType="i8"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[collection_payment_id]"
-                          name="collection_payment_id" />
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[collection_layout_entity_id]"
-                          dataType="i8"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[collection_layout_entity_id]"
-                          name="collection_layout_entity_id" />
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[collection_opinion_entity_id]"
-                          dataType="wstr"
-                          length="15"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[collection_opinion_entity_id]"
-                          name="collection_opinion_entity_id" />
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[payment_date]"
-                          dataType="dbDate"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[payment_date]"
-                          name="payment_date" />
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[Payment]"
-                          dataType="numeric"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[Payment]"
-                          name="Payment"
-                          precision="33"
-                          scale="2" />
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[mofified]"
-                          dataType="dbTimeStamp2"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[mofified]"
-                          name="mofified" />
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[CONTRATO]"
-                          dataType="i8"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[CONTRATO]"
-                          name="CONTRATO" />
-                        <outputColumn
-                          refId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[created]"
-                          dataType="dbTimeStamp2"
-                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Error Output].Columns[created]"
-                          name="created" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -10596,6 +10335,248 @@
                           externalMetadataColumnId="Package\DataPaymentsGayosso\DataMigration_P\Mysql_data_payment_gayosso.Outputs[ODBC Source Output].ExternalColumns[created]"
                           lineageId="Package\DataPaymentsGayosso\DataMigration_P\Mysql_data_payment_gayosso.Outputs[ODBC Source Error Output].Columns[created]"
                           name="created" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="OLE DB Source"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[intranet].[data_payment_gayosso]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Connections[OleDbConnection]"
+                      connectionManagerID="{8F72934A-B606-44C4-B85C-12E073D7355C}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[MSSQL_ODS_INTRANET]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output]"
+                      isSorted="true"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[collection_opinion_entity_id]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[collection_opinion_entity_id]"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[collection_opinion_entity_id]"
+                          name="collection_opinion_entity_id"
+                          truncationRowDisposition="IgnoreFailure" />
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTRATO]"
+                          dataType="i8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CONTRATO]"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTRATO]"
+                          name="CONTRATO"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[created]"
+                          dataType="dbTimeStamp2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[created]"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[created]"
+                          name="created"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[collection_payment_id_MSSQL]"
+                          dataType="ui4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[collection_payment_id]"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[collection_payment_id_MSSQL]"
+                          name="collection_payment_id_MSSQL"
+                          sortKeyPosition="1"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[collection_layout_entity_id]"
+                          dataType="i8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[collection_layout_entity_id]"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[collection_layout_entity_id]"
+                          name="collection_layout_entity_id"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[payment_date]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[payment_date]"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[payment_date]"
+                          name="payment_date"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[Payment]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Payment]"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[Payment]"
+                          name="Payment"
+                          precision="33"
+                          scale="2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[mofified_MSSQL]"
+                          dataType="dbTimeStamp2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[mofified]"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].Columns[mofified_MSSQL]"
+                          name="mofified_MSSQL"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[collection_opinion_entity_id]"
+                          dataType="wstr"
+                          length="15"
+                          name="collection_opinion_entity_id" />
+                        <externalMetadataColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CONTRATO]"
+                          dataType="i8"
+                          name="CONTRATO" />
+                        <externalMetadataColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[created]"
+                          dataType="dbTimeStamp2"
+                          name="created" />
+                        <externalMetadataColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[collection_payment_id]"
+                          dataType="i8"
+                          name="collection_payment_id" />
+                        <externalMetadataColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[collection_layout_entity_id]"
+                          dataType="i8"
+                          name="collection_layout_entity_id" />
+                        <externalMetadataColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[payment_date]"
+                          dataType="dbDate"
+                          name="payment_date" />
+                        <externalMetadataColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Payment]"
+                          dataType="numeric"
+                          name="Payment"
+                          precision="33"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[mofified]"
+                          dataType="dbTimeStamp2"
+                          name="mofified" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[collection_payment_id]"
+                          dataType="i8"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[collection_payment_id]"
+                          name="collection_payment_id" />
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[collection_layout_entity_id]"
+                          dataType="i8"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[collection_layout_entity_id]"
+                          name="collection_layout_entity_id" />
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[collection_opinion_entity_id]"
+                          dataType="wstr"
+                          length="15"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[collection_opinion_entity_id]"
+                          name="collection_opinion_entity_id" />
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[payment_date]"
+                          dataType="dbDate"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[payment_date]"
+                          name="payment_date" />
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Payment]"
+                          dataType="numeric"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Payment]"
+                          name="Payment"
+                          precision="33"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CONTRATO]"
+                          dataType="i8"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CONTRATO]"
+                          name="CONTRATO" />
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[created]"
+                          dataType="dbTimeStamp2"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[created]"
+                          name="created" />
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[mofified]"
+                          dataType="dbTimeStamp2"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[mofified]"
+                          name="mofified" />
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -11092,7 +11073,7 @@
                   refId="Package\DataPaymentsGayosso\DataMigration_P.Paths[OLE DB Source Output]"
                   endId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Inputs[Merge Join Right Input]"
                   name="OLE DB Source Output"
-                  startId="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso.Outputs[OLE DB Source Output]" />
+                  startId="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source.Outputs[OLE DB Source Output]" />
                 <path
                   refId="Package\DataPaymentsGayosso\DataMigration_P.Paths[Sort Output]"
                   endId="Package\DataPaymentsGayosso\DataMigration_P\Merge_data_payment_gayosso.Inputs[Merge Join Left Input]"
@@ -11853,9 +11834,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11961,9 +11940,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11997,9 +11974,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12021,9 +11996,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -12165,9 +12138,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12201,9 +12172,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12225,9 +12194,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12261,9 +12228,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12359,10 +12324,6 @@
           Id="Package\DataPaymentsGayosso\DataMigration_P\Mysql_data_payment_gayosso"
           TopLeft="24,15" />
         <NodeLayout
-          Size="240,42"
-          Id="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso"
-          TopLeft="284,16" />
-        <NodeLayout
           Size="246,42"
           Id="Package\DataPaymentsGayosso\DataMigration_P\Inser_sql_data_payment_gayosso"
           TopLeft="24,358" />
@@ -12441,45 +12402,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DataPaymentsGayosso\DataMigration_P.Paths[OLE DB Source Output]"
-          TopLeft="404,58">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-66,153"
-              Start="0,0"
-              End="-66,145.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,87.1739130434783" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,87.1739130434783"
-                    Point2="0,91.1739130434783"
-                    Point3="-4,91.1739130434783" />
-                  <mssgle:LineSegment
-                    End="-62,91.1739130434783" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-62,91.1739130434783"
-                    Point2="-66,91.1739130434783"
-                    Point3="-66,95.1739130434783" />
-                  <mssgle:LineSegment
-                    End="-66,145.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12501,9 +12424,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12525,9 +12446,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12562,8 +12481,46 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-69.6166471354167,17.5038381018842,25.8999609375,9.451171875"
+              BoundingBox="-69.6166471354165,17.5038381018842,25.8999609375,9.451171875"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="157,42"
+          Id="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source"
+          TopLeft="315,22" />
+        <EdgeLayout
+          Id="Package\DataPaymentsGayosso\DataMigration_P.Paths[OLE DB Source Output]"
+          TopLeft="393.5,64">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-55.5,147"
+              Start="0,0"
+              End="-55.5,139.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,83.5984654731458" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,83.5984654731458"
+                    Point2="0,87.5984654731458"
+                    Point3="-4,87.5984654731458" />
+                  <mssgle:LineSegment
+                    End="-51.5,87.5984654731458" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-51.5,87.5984654731458"
+                    Point2="-55.5,87.5984654731458"
+                    Point3="-55.5,91.5984654731458" />
+                  <mssgle:LineSegment
+                    End="-55.5,139.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -12580,7 +12537,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DataPaymentsGayosso\DataMigration_P\MSSQL_data_payment_gayosso">
+    design-time-name="Package\DataPaymentsGayosso\DataMigration_P\Inser_sql_data_payment_gayosso">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -12593,7 +12550,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DataPaymentsGayosso\DataMigration_P\Inser_sql_data_payment_gayosso">
+    design-time-name="Package\DataPaymentsGayosso\DataMigration_P\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
